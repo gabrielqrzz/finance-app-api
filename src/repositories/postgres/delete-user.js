@@ -4,9 +4,9 @@ export class PostgresDeleteUserRepository {
     async execute(userId) {
         const deletedUser = await PostgresHelpers.query(
             `
-            DELETE FROM user 
+            DELETE FROM users
             WHERE id = $1 
-            RETURNIG *
+            RETURNING *
             `,
             [userId],
         )
