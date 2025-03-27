@@ -16,13 +16,13 @@ export const checkIfTypeIsValid = (type) => {
     return ['EARNING', 'EXPENSE', 'INVESTIMENT'].includes(type)
 }
 export const invalidAmountResponse = () => {
-    badRequest({
+    return badRequest({
         message: 'The amount must be a valid currency.',
     })
 }
 
 export const invalidTypeResponse = () => {
-    badRequest({
+    return badRequest({
         message: 'The type must be EARNING, EXPENSE or INVESTIMENT.',
     })
 }
