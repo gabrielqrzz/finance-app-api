@@ -18,6 +18,6 @@ export class PostgresCreateTransactionRepository {
             ],
         )
 
-        return createdTransaction
+        return createdTransaction[0]
     }
 }
